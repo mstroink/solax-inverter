@@ -1,0 +1,38 @@
+{
+    "name": "mstroink/solax-inverter",
+    "description": "Collects data from Solax Inverter",
+    "keywords": ["solax", "inverter", "php", "solar", "client"],
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "psr/http-client": "^1.0",
+        "php-http/client-common": "^1.9 || ^2.0",
+        "php-http/client-implementation": "^1.0",
+        "php-http/discovery": "^1.6"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.3",
+        "php-http/guzzle6-adapter": "^1.0",
+        "phpunit/phpunit": "^5.7|^6.0",
+        "guzzlehttp/psr7": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MStroink\\Solax\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MStroink\\Solax\\Tests\\": [
+                "tests/"
+            ]
+        }
+    },
+    "suggest": {
+        "php-http/curl-client": "cURL client for PHP-HTTP",
+        "guzzlehttp/psr7": "PSR-7 message implementation that also provides common utility methods"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
