@@ -2,3 +2,4 @@
 /config
 /docs
 composer.lock
+.vscode
