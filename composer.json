@@ -2,7 +2,7 @@
     "name": "mstroink/solax-inverter",
     "description": "Collects data from Solax Inverter",
     "keywords": ["solax", "inverter", "php", "solar", "client"],
-    "type": "project",
+    "type": "libary",
     "require": {
         "php": ">=7.1",
         "psr/http-client": "^1.0",
