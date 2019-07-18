@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace MStroink\Solax\Http;
 
 use Http\Client\HttpClient;

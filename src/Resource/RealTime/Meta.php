@@ -1,5 +1,6 @@
 <?php
-declare (strict_types = 1);
+
+declare(strict_types=1);
 
 namespace MStroink\Solax\Resource\RealTime;
 
@@ -15,7 +16,7 @@ final class Meta implements Resource
      * @var string
      */
     protected $version;
-        /**
+    /**
      * @var string
      */
     protected $type;
@@ -59,7 +60,7 @@ final class Meta implements Resource
             $data['version'],
             $data['type'],
             $data['SN'],
-            (int)$data['Status']
+            (int) $data['Status']
         );
     }
 

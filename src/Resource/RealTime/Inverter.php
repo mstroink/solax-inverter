@@ -1,10 +1,11 @@
 <?php
-declare (strict_types = 1);
+
+declare(strict_types=1);
 
 namespace MStroink\Solax\Resource\RealTime;
 
-use MStroink\Solax\Resource\ResourceInterface as Resource;
 use MStroink\Solax\Resource\DataInterface as Data;
+use MStroink\Solax\Resource\ResourceInterface as Resource;
 
 final class Inverter implements Resource
 {
@@ -52,7 +53,7 @@ final class Inverter implements Resource
             $data[Data::INVERTER_INNER_TEMPERATURE],
             $data[Data::INVERTER_YIELD_TODAY],
             $data[Data::INVERTER_YIELD_TOTAL],
-            (float)$data[Data::INVERTER_YIELD_TOTAL_2]
+            (float) $data[Data::INVERTER_YIELD_TOTAL_2]
         );
     }
 

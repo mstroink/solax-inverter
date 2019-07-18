@@ -1,21 +1,22 @@
 <?php
-declare (strict_types = 1);
+
+declare(strict_types=1);
 
 namespace MStroink\Solax;
 
-use MStroink\Solax\Http\HttpClientConfigurator;
-use MStroink\Solax\Http\ClientConfiguratorInterface;
-use MStroink\Solax\Resource\RealTime\RealTime;
-use MStroink\Solax\Resource\History\History;
-use MStroink\Solax\Exception\HttpServerException;
+use GuzzleHttp\RequestOptions as Options;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use Http\Client\Exception\NetworkException;
 use Http\Client\HttpClient;
 use Http\Discovery\MessageFactoryDiscovery;
 use Http\Message\RequestFactory;
-use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\RequestOptions as Options;
+use MStroink\Solax\Exception\HttpServerException;
 use MStroink\Solax\Exception\UnknownErrorException;
+use MStroink\Solax\Http\ClientConfiguratorInterface;
+use MStroink\Solax\Http\HttpClientConfigurator;
+use MStroink\Solax\Resource\History\History;
+use MStroink\Solax\Resource\RealTime\RealTime;
+use Psr\Http\Message\ResponseInterface;
 
 class Inverter
 {
@@ -114,7 +115,7 @@ class Inverter
         if (PREG_NO_ERROR !== preg_last_error()) {
             throw new \RuntimeException('Error (%d) when trying to preg_replace response', preg_last_error());
         }
-        $data = json_decode((string)$json, true);
+        $data = json_decode((string) $json, true);
 
         if (JSON_ERROR_NONE !== json_last_error()) {
             throw new \RuntimeException(sprintf('Error (%d) when trying to json_decode response', json_last_error()));

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MStroink\Solax\Resource\History;
 
 use MStroink\Solax\Resource\DataInterface as Data;

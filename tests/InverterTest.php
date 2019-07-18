@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace MStroink\Solax\Tests;
 
 use MStroink\Solax\Inverter;
@@ -61,7 +64,7 @@ class InverterTest extends TestBase
             ->willReturn(new Response(200, [], $this->fixture('RawRealTimeData.txt', false)));
 
         $response = $this->inverter->getRealTimeData();
-        
+
         $this->assertCount(5, $response->toArray());
         $this->assertInstanceOf(RealTime::class, $response);
     }
