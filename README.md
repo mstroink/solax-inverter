@@ -1,3 +1,18 @@
+<p align="center">
+    <a href="https://travis-ci.org/mstroink/solax-inverter" target="_blank">
+        <img alt="Build Status" src="https://travis-ci.org/mstroink/solax-inverter.svg?branch=master">
+    </a>
+    <a href="https://codecov.io/gh/mstroink/solax-inverter" target="_blank">
+        <img alt="Coverage Status" src="https://codecov.io/gh/mstroink/solax-inverter/branch/master/graph/badge.svg">
+    </a>
+    <a href="https://packagist.org/packages/mstroink/steca-grid" target="_blank">
+        <img alt="Stable" src="https://poser.pugx.org/mstroink/solax-inverter/v/stable.svg">
+    </a>
+    <a href="https://php.net" target="_blank">
+        <img alt="php Version" src="https://img.shields.io/badge/php-%3E=%207.1-8892BF.svg">
+    </a>
+</p>
+
 # Solax Inverter
 
 Simple PHP Client for reading realtime data from the Solax inverter
