@@ -25,7 +25,7 @@ final class Battery implements Resource
     /**
      * @var float
      */
-    protected $charge;
+    protected $current;
     /**
      * @var float
      */
@@ -35,20 +35,20 @@ final class Battery implements Resource
      * @param float $voltage
      * @param float $power
      * @param float $temperature
-     * @param float $charge
+     * @param float $current
      * @param float $remainCapacity
      */
     public function __construct(
         float $voltage,
         float $power,
         float $temperature,
-        float $charge,
+        float $current,
         float $remainCapacity
     ) {
         $this->voltage = $voltage;
         $this->power = $power;
         $this->temperature = $temperature;
-        $this->charge = $charge;
+        $this->current = $current;
         $this->remainCapacity = $remainCapacity;
     }
 
@@ -65,6 +65,46 @@ final class Battery implements Resource
             $data[Data::BATTERY_CURRENT],
             $data[Data::BATTERY_REMAINING_CAPACITY]
         );
+    }
+
+    /**
+     * @return float
+     */
+    public function getVoltage(): float
+    {
+        return $this->voltage;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPower(): float
+    {
+        return $this->power;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTemperature(): float
+    {
+        return $this->temperature;
+    }
+
+    /**
+     * @return float
+     */
+    public function getCurrent(): float
+    {
+        return $this->current;
+    }
+
+    /**
+     * @return float
+     */
+    public function getRemainCapacity(): float
+    {
+        return $this->remainCapacity;
     }
 
     /**

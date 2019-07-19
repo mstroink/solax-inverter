@@ -10,6 +10,7 @@ use MStroink\Solax\Resource\RealTime\Meta;
 use MStroink\Solax\Resource\RealTime\Pv;
 use MStroink\Solax\Resource\RealTime\Grid;
 use MStroink\Solax\Resource\RealTime\Inverter;
+use MStroink\Solax\Resource\RealTime\Battery;
 
 class RealTimeTest extends TestBase
 {
@@ -24,6 +25,15 @@ class RealTimeTest extends TestBase
         $this->assertInstanceOf(Grid::class, $rt->Grid);
         $this->assertInstanceOf(Inverter::class, $rt->Inverter);
         $this->assertNull($rt->Battery);
+    }
+
+    public function testCreateWithBattery()
+    {
+        /**
+         * @var \MStroink\Solax\Resource\RealTime\Realtime $rt
+         */
+        $rt = RealTime::create($this->fixture('RealTimeDataWithBattery.json'));
+        $this->assertInstanceOf(Battery::class, $rt->Battery);
     }
 
     public function testToArray()
